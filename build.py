@@ -19,7 +19,7 @@ with open(source, encoding='latin-1') as dataset:
     for row in csv_reader:
         zip = f'{row["CP4"]}-{row["CP3"]}'
         with open(f'{output}/{zip}.json', 'w', encoding='utf-8') as out:
-            out.write(json.dumps(rowca, ensure_ascii=False))
+            out.write(json.dumps(row, ensure_ascii=False))
 
 # TODO the same XXXX-XXX has more than 1 result
 # TODO lookup district and region
